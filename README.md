@@ -1,18 +1,33 @@
-# React + Vite
+# Agrosmart AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project overview
 
-Currently, two official plugins are available:
+A farmer-facing agriculture application with login, farmer profile, and dashboard experiences.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What it contains
 
-## React Compiler
+- React and Vite frontend
+- Farmer login screen
+- Farmer profile workflow
+- Dashboard route and reusable components
+- Browser-based navigation and local session state
+- Calls to a farmer login API currently configured at `http://localhost:5000/api/farmer/login`
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Current status
 
-Note: This will impact Vite dev & build performances.
+This repository currently contains the frontend application. The backend service, database, AI/agronomy capabilities, and deployment configuration are not present at the repository root. The existing UI stores a login flag and farmer identifier in `localStorage`; that is suitable only as prototype state and is not a secure server-controlled session.
 
-## Expanding the ESLint configuration
+## Local development
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+## Recommended next work
+
+- Define the exact farming problems the product solves.
+- Add a documented backend/API and environment-based API URL.
+- Replace prototype login state with authenticated, expiring server sessions.
+- Define consent, farmer-data privacy, offline/low-connectivity behavior, and Marathi/English UX.
+- Document which “AI” recommendations are implemented, their evidence sources, and safety limitations.
