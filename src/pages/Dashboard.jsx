@@ -10,8 +10,7 @@ function Dashboard() {
   const [weatherAlert, setWeatherAlert] = useState("");
 
   // Live Hardware Camera Tracking
-  const [isCameraActive, setIsCameraActive] = useState(false);
-  const videoRef = useRef(null);
+  const [, setIsCameraActive] = useState(false);
   const cameraStreamRef = useRef(null);
 
   // Configuration Switches
@@ -676,11 +675,6 @@ function Dashboard() {
     setDiseasePhoto(null);
     setSelectedDiseaseCrop("");
     setDiseaseDiagnosticResult(null);
-  };
-
-  const handleDiseaseCameraSnapshot = () => {
-    setDiseasePhoto("https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&w=150&q=80");
-    closeActiveDashboardModal();
   };
 
   const closeActiveDashboardModal = () => {
